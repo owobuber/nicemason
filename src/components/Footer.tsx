@@ -1,7 +1,7 @@
 "use client";
 
-import { MessageCircle, Mail, MapPin, Share2, ThumbsUp, AtSign } from "lucide-react";
-import { WHATSAPP_NUMBER, BOOKING_EMAIL } from "@/data/rooms";
+import { MessageCircle, Mail, MapPin, Phone, Share2, ThumbsUp, AtSign } from "lucide-react";
+import { WHATSAPP_NUMBER, CONTACT_PHONE, BOOKING_EMAIL } from "@/data/rooms";
 
 const navLinks = [
   { label: "Home", href: "#hero" },
@@ -83,6 +83,15 @@ export default function Footer() {
               <span className="text-white/50 text-sm">Benin City, Edo State, Nigeria</span>
             </li>
             <li className="flex items-start gap-3">
+              <Phone size={14} className="text-[#c49a6c] mt-0.5 flex-shrink-0" />
+              <a
+                href={`tel:${CONTACT_PHONE}`}
+                className="text-white/50 text-sm hover:text-white transition-colors"
+              >
+                {CONTACT_PHONE}
+              </a>
+            </li>
+            <li className="flex items-start gap-3">
               <MessageCircle size={14} className="text-[#c49a6c] mt-0.5 flex-shrink-0" />
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
@@ -90,7 +99,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                +{WHATSAPP_NUMBER}
+                +234 707 387 4943 (WhatsApp)
               </a>
             </li>
             <li className="flex items-start gap-3">

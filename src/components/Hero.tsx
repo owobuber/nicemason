@@ -1,28 +1,101 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import BookingWidget from "./BookingWidget";
 import { MapPin } from "lucide-react";
 
+const slides = [
+  {
+    src: "/images/hotel-1.jpg",
+    alt: "Nice Mason Hotel exterior – Luxury hotel in Benin City, Nigeria",
+    tagline: "Where every detail whispers",
+    highlight: "luxury",
+  },
+  {
+    src: "/images/hotel-3.jpg",
+    alt: "Nice Mason Hotel – elegant reception and lobby",
+    tagline: "Crafted for those who expect",
+    highlight: "the finest",
+  },
+  {
+    src: "/images/hotel-6.jpg",
+    alt: "Nice Mason Hotel – premium dining and lounge",
+    tagline: "A sanctuary of comfort and",
+    highlight: "refinement",
+  },
+  {
+    src: "/images/mason-luxury-main.jpg",
+    alt: "Nice Mason Hotel – Mason Luxury room interior",
+    tagline: "Five star living in the heart of",
+    highlight: "Benin City",
+  },
+];
+
 export default function Hero() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((i) => (i + 1) % slides.length);
+    }, 5500);
+    return () => clearInterval(timer);
+  }, []);
+
   const scrollToRooms = () => {
     document.querySelector("#rooms")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background image with parallax */}
+      {/* Sliding backgrounds */}
       <div className="absolute inset-0">
-        <Image
-          src="/images/hotel-1.jpg"
-          alt="Nice Mason Hotel exterior – Luxury hotel in Benin City, Nigeria"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
+        <AnimatePresence mode="sync">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={slides[current].src}
+              alt={slides[current].alt}
+              fill
+              priority={current === 0}
+              className="object-cover object-center"
+              sizes="100vw"
+            />
+          </motion.div>
+        </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0d2b4e]/75 via-[#0d2b4e]/55 to-[#0d2b4e]/80" />
+      </div>
+
+      {/* Slide dots */}
+      <div className="absolute top-28 right-8 md:right-12 z-20 flex flex-col gap-2">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            aria-label={`Go to slide ${i + 1}`}
+            className={`w-1.5 rounded-full transition-all duration-500 ${
+              i === current ? "h-8 bg-[#c49a6c]" : "h-3 bg-white/30 hover:bg-white/60"
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Progress bar */}
+      <div className="absolute bottom-0 left-0 right-0 z-20 h-0.5 bg-white/10">
+        <motion.div
+          key={current}
+          initial={{ width: "0%" }}
+          animate={{ width: "100%" }}
+          transition={{ duration: 5.5, ease: "linear" }}
+          className="h-full bg-[#c49a6c]"
+        />
       </div>
 
       {/* Content */}
@@ -53,15 +126,19 @@ export default function Hero() {
             <span className="text-[#c49a6c]">Mason</span>
           </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-            className="text-white/70 text-lg md:text-2xl font-light tracking-wide mb-10 max-w-xl"
-          >
-            Where every detail whispers{" "}
-            <span className="text-white font-semibold">luxury</span>.
-          </motion.p>
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={current}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.6 }}
+              className="text-white/70 text-lg md:text-2xl font-light tracking-wide mb-10 max-w-xl"
+            >
+              {slides[current].tagline}{" "}
+              <span className="text-white font-semibold">{slides[current].highlight}</span>.
+            </motion.p>
+          </AnimatePresence>
 
           {/* CTAs */}
           <motion.div

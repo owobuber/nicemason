@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { MessageCircle, Mail, MapPin, Phone, Clock } from "lucide-react";
-import { WHATSAPP_NUMBER, BOOKING_EMAIL } from "@/data/rooms";
+import { WHATSAPP_NUMBER, CONTACT_PHONE, BOOKING_EMAIL } from "@/data/rooms";
 import BookingWidget from "./BookingWidget";
 
 const contactInfo = [
@@ -14,8 +14,13 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    title: "Phone / WhatsApp",
-    lines: [`+${WHATSAPP_NUMBER}`],
+    title: "Contact Phone",
+    lines: [CONTACT_PHONE],
+  },
+  {
+    icon: MessageCircle,
+    title: "WhatsApp Booking",
+    lines: ["+234 707 387 4943"],
   },
   {
     icon: Mail,
@@ -104,7 +109,7 @@ export default function Contact() {
             </div>
 
             {/* Contact details */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {contactInfo.map((info, i) => (
                 <motion.div
                   key={info.title}

@@ -10,8 +10,9 @@ export interface Room {
 // Centralized room data — edit data/rooms.json or use the /admin page
 // to update pricing and descriptions without touching components.
 
-export const WHATSAPP_NUMBER = "2347012345678"; // Replace with actual number
-export const BOOKING_EMAIL = "bookings@nicemason.com"; // Replace with actual email
+export const WHATSAPP_NUMBER = "2347073874943"; // WhatsApp booking line
+export const CONTACT_PHONE = "07051644020"; // Front desk / contact line
+export const BOOKING_EMAIL = "contactInfo@nice-mason.com";
 export const ADMIN_PASSWORD = "nicemason2024"; // Change this!
 
 export function formatPrice(price: number): string {
