@@ -1,0 +1,78 @@
+[
+  {
+    "id": "mason-luxury",
+    "name": "Mason Luxury",
+    "price": 80000,
+    "description": "An exquisite blend of contemporary design and timeless elegance. Featuring a king-sized bed, premium linens, a spacious en-suite bathroom with a rainfall shower, and a private balcony with panoramic city views.",
+    "images": [
+      "/images/mason-luxury-main.jpg",
+      "/images/mason-luxury-1.jpg",
+      "/images/mason-luxury-2.jpg",
+      "/images/mason-luxury-3.jpg",
+      "/images/mason-luxury-4.jpg",
+      "/images/mason-luxury-5.jpg",
+      "/images/mason-luxury-6.jpg"
+    ],
+    "amenities": ["King Bed", "Balcony", "Rainfall Shower", "Mini Bar", "Smart TV", "Air Conditioning"]
+  },
+  {
+    "id": "vip-suite",
+    "name": "VIP Suite",
+    "price": 150000,
+    "description": "Our crown jewel — a full suite experience with a separate living room, dining area, and bedroom. Draped in rich fabrics and fine furnishings, ideal for the most discerning guests seeking the pinnacle of luxury.",
+    "images": [
+      "/images/vip-suite-main.jpg",
+      "/images/vip-suite-1.jpg",
+      "/images/vip-suite-2.jpg",
+      "/images/vip-suite-3.jpg",
+      "/images/vip-suite-4.jpg",
+      "/images/vip-suite-5.jpg",
+      "/images/vip-suite-6.jpg"
+    ],
+    "amenities": ["King Bed", "Living Room", "Dining Area", "Jacuzzi", "Butler Service", "Smart TV", "Mini Bar"]
+  },
+  {
+    "id": "special-mason-luxury",
+    "name": "Special Mason Luxury",
+    "price": 100000,
+    "description": "A curated upgrade from our flagship Luxury room — enhanced with premium finishes, expanded living space, and bespoke amenities designed for guests who desire that extra touch of distinction.",
+    "images": [
+      "/images/special-mason-luxury-main.jpg",
+      "/images/special-mason-luxury-1.jpg",
+      "/images/special-mason-luxury-2.jpg",
+      "/images/special-mason-luxury-3.jpg",
+      "/images/special-mason-luxury-4.jpg",
+      "/images/special-mason-luxury-5.jpg",
+      "/images/special-mason-luxury-6.jpg",
+      "/images/special-mason-luxury-7.jpg"
+    ],
+    "amenities": ["King Bed", "Premium Finishes", "Rainfall Shower", "Lounge Seating", "Smart TV", "Mini Bar"]
+  },
+  {
+    "id": "business-executive",
+    "name": "Business Executive",
+    "price": 65000,
+    "description": "Designed for the modern professional. A refined workspace, high-speed connectivity, and a restful bedroom converge to create the perfect environment for productivity and recovery.",
+    "images": [
+      "/images/business-executive-main.jpg",
+      "/images/business-executive-1.jpg",
+      "/images/business-executive-2.jpg",
+      "/images/business-executive-3.jpg",
+      "/images/business-executive-4.jpg"
+    ],
+    "amenities": ["Queen Bed", "Work Desk", "High-Speed WiFi", "Smart TV", "En-Suite Bathroom", "Air Conditioning"]
+  },
+  {
+    "id": "mason-deluxe",
+    "name": "Mason Deluxe",
+    "price": 40000,
+    "description": "Warm, inviting, and thoughtfully appointed — the Mason Deluxe offers genuine comfort at an exceptional value. Perfect for short stays or budget-conscious guests who refuse to compromise on quality.",
+    "images": [
+      "/images/mason-deluxe-main.jpg",
+      "/images/mason-deluxe-1.jpg",
+      "/images/mason-deluxe-2.jpg",
+      "/images/mason-deluxe-3.jpg"
+    ],
+    "amenities": ["Double Bed", "En-Suite Bathroom", "Smart TV", "Air Conditioning", "Daily Housekeeping"]
+  }
+]

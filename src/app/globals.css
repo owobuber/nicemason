@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --blue-primary: #0d2b4e;
+  --blue-mid: #1a4a7a;
+  --blue-light: #2563eb;
+  --brown-primary: #7c4f2a;
+  --brown-light: #a0673a;
+  --brown-accent: #c49a6c;
+  --gold: #d4a843;
+  --white: #ffffff;
+  --off-white: #faf8f5;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-poppins: var(--font-poppins);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--white);
+  color: #1a1a1a;
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  overflow-x: hidden;
 }
+
+.font-poppins {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: var(--blue-primary); border-radius: 3px; }
+
+/* Day picker overrides */
+.rdp {
+  --rdp-accent-color: #0d2b4e;
+  --rdp-background-color: #e8f0fe;
+  margin: 0;
+}
+.rdp-day_selected { background-color: #0d2b4e !important; color: white !important; }
+.rdp-day_today { color: #7c4f2a; font-weight: 700; }
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  animation: fadeIn 0.2s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
