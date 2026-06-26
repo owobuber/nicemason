@@ -93,7 +93,7 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 1, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25 }}
@@ -103,7 +103,7 @@ export default function Navbar() {
               <motion.a
                 key={link.href}
                 href={link.href}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 1, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.06 }}
                 onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
@@ -114,7 +114,7 @@ export default function Navbar() {
             ))}
             <motion.a
               href="#contact"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: links.length * 0.06 }}
               onClick={(e) => { e.preventDefault(); handleNavClick("#contact"); }}

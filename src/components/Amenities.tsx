@@ -32,7 +32,7 @@ export default function Amenities() {
         {/* Header */}
         <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-4 mb-4"
@@ -45,7 +45,7 @@ export default function Amenities() {
           </motion.div>
 
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-white font-black text-5xl md:text-6xl leading-tight"
@@ -61,7 +61,7 @@ export default function Amenities() {
           {amenities.map((item, i) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 1, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.06 }}
               className="group flex flex-col items-center text-center p-6 border border-white/10 rounded-sm hover:border-[#c49a6c]/50 hover:bg-white/5 transition-all duration-300"

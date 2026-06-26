@@ -18,7 +18,7 @@ export default function Rooms() {
         {/* Header */}
         <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-4 mb-4"
@@ -31,7 +31,7 @@ export default function Rooms() {
           </motion.div>
 
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-[#0d2b4e] font-black text-5xl md:text-6xl leading-tight"
@@ -40,7 +40,7 @@ export default function Rooms() {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-gray-500 text-lg mt-4 max-w-2xl mx-auto"

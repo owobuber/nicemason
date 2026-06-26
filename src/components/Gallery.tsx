@@ -41,7 +41,7 @@ export default function Gallery() {
         {/* Header */}
         <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-4 mb-4"
@@ -54,7 +54,7 @@ export default function Gallery() {
           </motion.div>
 
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-[#0d2b4e] font-black text-5xl md:text-6xl"
@@ -68,7 +68,7 @@ export default function Gallery() {
           {galleryImages.map((img, i) => (
             <motion.div
               key={img.src}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 1, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.04 }}
               onClick={() => setSelected(i)}
@@ -97,7 +97,7 @@ export default function Gallery() {
       <AnimatePresence>
         {selected !== null && (
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center lightbox-overlay"
@@ -119,7 +119,7 @@ export default function Gallery() {
             </button>
             <motion.div
               key={selected}
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 1, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}

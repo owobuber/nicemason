@@ -46,7 +46,7 @@ export default function Contact() {
         {/* Header */}
         <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-4 mb-4"
@@ -59,7 +59,7 @@ export default function Contact() {
           </motion.div>
 
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-[#0d2b4e] font-black text-5xl md:text-6xl leading-tight"
@@ -73,7 +73,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left: booking widget + quick actions */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 1, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
@@ -113,7 +113,7 @@ export default function Contact() {
               {contactInfo.map((info, i) => (
                 <motion.div
                   key={info.title}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 1, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
                   className="p-4 border border-gray-100 rounded-sm"
@@ -134,7 +134,7 @@ export default function Contact() {
 
           {/* Right: map embed */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 1, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="rounded-sm overflow-hidden shadow-lg"

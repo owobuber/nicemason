@@ -27,7 +27,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6 md:px-10" ref={ref}>
         {/* Section label */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="flex items-center gap-4 mb-6"
@@ -42,7 +42,7 @@ export default function About() {
           {/* Text */}
           <div>
             <motion.h2
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 1, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-[#0d2b4e] font-black text-5xl md:text-6xl leading-tight mb-8"
@@ -53,7 +53,7 @@ export default function About() {
             </motion.h2>
 
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 1, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-gray-600 text-lg leading-relaxed mb-6"
@@ -64,7 +64,7 @@ export default function About() {
             </motion.p>
 
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 1, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.3 }}
               className="text-gray-600 text-lg leading-relaxed mb-10"
@@ -79,7 +79,7 @@ export default function About() {
               {pillars.map((p, i) => (
                 <motion.div
                   key={p.title}
-                  initial={{ opacity: 0, x: -30 }}
+                  initial={{ opacity: 1, x: -30 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.4 + i * 0.1 }}
                   className="flex items-start gap-4"
@@ -99,7 +99,7 @@ export default function About() {
           {/* Image + stats */}
           <div className="relative">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 1, scale: 0.95 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.9, delay: 0.2 }}
               className="relative h-[500px] md:h-[620px] rounded-sm overflow-hidden"
@@ -120,7 +120,7 @@ export default function About() {
 
             {/* Stats bar */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 1, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.5 }}
               className="absolute -bottom-10 left-4 right-4 md:-bottom-6 md:left-8 md:right-8 bg-[#0d2b4e] px-6 py-5 rounded-sm grid grid-cols-4 gap-2"
