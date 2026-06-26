@@ -1,10 +1,65 @@
 # Nice Mason Hotel — Website
 
 A modern, awards-style luxury hotel website built with Next.js 15, Tailwind CSS, and Framer Motion.
+Configured for **static export** so it can be deployed to any shared host (Truehost, cPanel, Hostinger, Namecheap, etc.).
 
 ---
 
-## Quick Start
+## 🚀 Deploying to Truehost (or any cPanel host)
+
+The site builds into a self-contained `out/` folder of static HTML, CSS, JS, and images. **No Node.js server needed on the host.**
+
+### Step-by-step
+
+**1. Build the site (on your computer):**
+
+```bash
+npm install
+npm run build
+```
+
+This produces an `out/` folder (already zipped for you as `nicemason-truehost.zip`).
+
+**2. Log into your Truehost cPanel** — usually at `https://yourdomain.com:2083` or via the link in your Truehost welcome email.
+
+**3. Open File Manager** → navigate to `public_html/`.
+
+**4. Upload `nicemason-truehost.zip`** (using the *Upload* button).
+
+**5. Right-click the uploaded zip → *Extract*.** All files will be extracted into `public_html/`.
+
+**6. Delete the zip file.**
+
+**7. Visit your domain** — the site is live! 🎉
+
+### Folder structure on the server
+
+```
+public_html/
+├── index.html          ← homepage
+├── admin/index.html    ← admin page
+├── images/             ← all hotel photos
+├── _next/              ← compiled CSS & JS
+├── .htaccess           ← clean URLs, gzip, caching
+├── robots.txt
+└── sitemap.xml
+```
+
+### Updating prices later
+
+Since this is a static site, the **admin page can't save changes directly to the server** (Truehost doesn't run Node.js). To update prices:
+
+1. Edit `data/rooms.json` on your computer
+2. Run `npm run build`
+3. Re-upload `out/` to `public_html/` (overwrite existing files)
+
+### Enable HTTPS
+
+After uploading, go to cPanel → **SSL/TLS Status** → click *Run AutoSSL*. Once SSL is active, uncomment the HTTPS redirect block in `public/.htaccess` and rebuild.
+
+---
+
+## 🛠 Local Development
 
 ```bash
 npm install
