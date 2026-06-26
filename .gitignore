@@ -43,3 +43,7 @@ next-env.d.ts
 # Static export output
 /out
 nicemason-truehost.zip
+
+# Static deployment package
+nice-mason-static.zip
+truehost-site/images/

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nice Mason Hotel – Luxury Accommodation in Benin City, Nigeria</title>
+<meta name="description" content="Experience unmatched luxury at Nice Mason Hotel in Benin City, Nigeria. Premium rooms, world-class amenities, impeccable service. Book your stay today." />
+<meta name="keywords" content="hotel in Benin City, Nice Mason hotel, luxury hotel Nigeria, accommodation Benin City, VIP suite Benin, hotel Edo State" />
+<meta name="author" content="Nice Mason Hotel" />
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Nice Mason Hotel – Luxury in Benin City, Nigeria" />
+<meta property="og:description" content="Premium rooms, exceptional service. Book your stay at Nice Mason Hotel." />
+<meta property="og:image" content="https://nice-mason.com/images/hotel-1.jpg" />
+<meta property="og:url" content="https://nice-mason.com" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_NG" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nice Mason Hotel – Luxury in Benin City, Nigeria" />
+<meta name="twitter:description" content="Premium rooms, exceptional service. Book your stay at Nice Mason Hotel." />
+<meta name="twitter:image" content="https://nice-mason.com/images/hotel-1.jpg" />
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230d2b4e'/%3E%3Ctext x='50' y='68' font-size='56' font-weight='900' fill='%23c49a6c' text-anchor='middle' font-family='Arial,sans-serif'%3EN%3C/text%3E%3C/svg%3E" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet" />
+
+<!-- Styles -->
+<link rel="stylesheet" href="styles.css" />
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Nice Mason Hotel",
+  "description": "Luxury hotel in Benin City, Nigeria offering premium rooms and world-class amenities.",
+  "url": "https://nice-mason.com",
+  "telephone": "+2347073874943",
+  "image": "https://nice-mason.com/images/hotel-1.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Benin City",
+    "addressLocality": "Benin City",
+    "addressRegion": "Edo State",
+    "addressCountry": "NG"
+  },
+  "priceRange": "₦40,000 – ₦150,000"
+}
+</script>
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="#hero" class="brand">
+      <span class="brand-name">Nice Mason</span>
+      <span class="brand-tag">Luxury Hotel</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">Book Now</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO (4-slide carousel) ============ -->
+<section id="hero" class="hero">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('images/hotel-1.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/hotel-3.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/hotel-6.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/mason-luxury-main.jpg')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-content">
+    <div class="hero-badge reveal">
+      <span class="dot"></span>
+      <span>Benin City, Nigeria</span>
+    </div>
+
+    <h1 class="hero-title reveal">
+      Nice<br /><span class="gold">Mason</span>
+    </h1>
+
+    <div class="hero-taglines">
+      <p class="hero-tagline active">Where every detail whispers <strong>luxury</strong>.</p>
+      <p class="hero-tagline">Crafted for those who expect <strong>the finest</strong>.</p>
+      <p class="hero-tagline">A sanctuary of comfort and <strong>refinement</strong>.</p>
+      <p class="hero-tagline">Five-star living in the heart of <strong>Benin City</strong>.</p>
+    </div>
+
+    <div class="hero-ctas reveal">
+      <a href="#contact" class="btn btn-gold">Book Now</a>
+      <a href="#rooms" class="btn btn-ghost">View Rooms</a>
+    </div>
+  </div>
+
+  <div class="hero-dots" id="heroDots">
+    <button class="dot-btn active" data-slide="0"></button>
+    <button class="dot-btn" data-slide="1"></button>
+    <button class="dot-btn" data-slide="2"></button>
+    <button class="dot-btn" data-slide="3"></button>
+  </div>
+
+  <div class="hero-progress"><div class="hero-progress-bar" id="heroProgress"></div></div>
+
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="about section">
+  <div class="container">
+    <div class="section-label reveal">
+      <span class="line"></span>
+      <span>Our Story</span>
+    </div>
+
+    <div class="about-grid">
+      <div>
+        <h2 class="section-title reveal">A New Era of<br /><span class="brown">Nigerian Luxury</span></h2>
+        <p class="about-text reveal">
+          Nice Mason Hotel stands as Benin City's premier destination for luxury accommodation.
+          Nestled in the heart of the city, we have redefined what hospitality means in the ancient Kingdom of Benin —
+          blending contemporary elegance with the warmth of authentic Nigerian culture.
+        </p>
+        <p class="about-text reveal">
+          Whether you arrive for business or leisure, our rooms, suites, and bespoke services are designed
+          to exceed every expectation — because at Nice Mason, excellence is not the goal. It is the standard.
+        </p>
+
+        <div class="pillars">
+          <div class="pillar reveal">
+            <div class="pillar-icon">★</div>
+            <div>
+              <h4>Award-Worthy Design</h4>
+              <p>Every corner crafted with intention — from curated artwork to bespoke furnishings.</p>
+            </div>
+          </div>
+          <div class="pillar reveal">
+            <div class="pillar-icon">◆</div>
+            <div>
+              <h4>Uncompromising Quality</h4>
+              <p>Premium linens, chef-driven cuisine, and personalised service define the Nice Mason standard.</p>
+            </div>
+          </div>
+          <div class="pillar reveal">
+            <div class="pillar-icon">♛</div>
+            <div>
+              <h4>Trusted by Dignitaries</h4>
+              <p>The preferred choice of executives and discerning travelers visiting Benin City.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-visual reveal">
+        <img src="images/hotel-5.jpg" alt="Nice Mason Hotel interior – lobby and lounge" />
+        <div class="about-stats">
+          <div><strong>5★</strong><span>Experience</span></div>
+          <div><strong>100+</strong><span>Rooms</span></div>
+          <div><strong>24/7</strong><span>Concierge</span></div>
+          <div><strong>5+</strong><span>Years</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROOMS ============ -->
+<section id="rooms" class="rooms section">
+  <div class="container">
+    <div class="section-label center reveal">
+      <span class="line"></span>
+      <span>Accommodations</span>
+      <span class="line"></span>
+    </div>
+    <h2 class="section-title center reveal">Rooms &amp; Suites</h2>
+    <p class="section-lead reveal">
+      Five distinct accommodations, each a sanctuary. Book instantly via WhatsApp or email.
+    </p>
+
+    <div class="rooms-grid" id="roomsGrid">
+      <!-- Cards rendered by JS from rooms data -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ AMENITIES ============ -->
+<section id="amenities" class="amenities section">
+  <div class="container">
+    <div class="section-label center reveal light">
+      <span class="line"></span>
+      <span>Hotel Features</span>
+      <span class="line"></span>
+    </div>
+    <h2 class="section-title center light reveal">World-Class<br /><span class="gold">Amenities</span></h2>
+
+    <div class="amenities-grid">
+      <div class="amenity reveal"><div class="amenity-icon">📶</div><h4>High-Speed WiFi</h4><p>Seamless connectivity throughout</p></div>
+      <div class="amenity reveal"><div class="amenity-icon">🏊</div><h4>Swimming Pool</h4><p>Temperature-controlled outdoor pool</p></div>
+      <div class="amenity reveal"><div class="amenity-icon">🍽️</div><h4>Restaurant &amp; Bar</h4><p>Local &amp; international cuisine</p></div>
+      <div class="amenity reveal"><div class="amenity-icon">🚗</div><h4>Secure Parking</h4><p>24/7 guarded parking</p></div>
+      <div class="amenity reveal"><div class="amenity-icon">📺</div><h4>Smart TVs</h4><p>Premium channels in every room</p></div>
+      <div class="amenity reveal"><div class="amenity-icon">❄️</div><h4>Air Conditioning</h4><p>Climate-controlled comfort</p></div>
+      <div class="amenity reveal"><div class="amenity-icon">☕</div><h4>Room Service</h4><p>Round-the-clock in-room dining</p></div>
+      <div class="amenity reveal"><div class="amenity-icon">🛡️</div><h4>24/7 Security</h4><p>Trained personnel on all grounds</p></div>
+      <div class="amenity reveal"><div class="amenity-icon">🛏️</div><h4>Premium Bedding</h4><p>Egyptian cotton linens</p></div>
+      <div class="amenity reveal"><div class="amenity-icon">🎩</div><h4>Concierge</h4><p>Dedicated personal service</p></div>
+      <div class="amenity reveal"><div class="amenity-icon">👔</div><h4>Laundry Service</h4><p>Express laundry available</p></div>
+      <div class="amenity reveal"><div class="amenity-icon">💪</div><h4>Fitness Center</h4><p>Fully equipped modern gym</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="gallery section">
+  <div class="container">
+    <div class="section-label center reveal">
+      <span class="line"></span>
+      <span>Visual Story</span>
+      <span class="line"></span>
+    </div>
+    <h2 class="section-title center reveal">Hotel Gallery</h2>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <button class="lb-next" id="lbNext" aria-label="Next">›</button>
+  <img id="lbImage" alt="" />
+  <div class="lb-caption" id="lbCaption"></div>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact section">
+  <div class="container">
+    <div class="section-label center reveal">
+      <span class="line"></span>
+      <span>Get in Touch</span>
+      <span class="line"></span>
+    </div>
+    <h2 class="section-title center reveal">Reserve Your<br /><span class="brown">Stay</span></h2>
+
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <div class="contact-actions">
+          <a href="https://wa.me/2347073874943?text=Hello%20Nice%20Mason%2C%20I%27d%20like%20to%20make%20a%20booking%20enquiry."
+             target="_blank" rel="noopener" class="contact-card-btn whatsapp">
+            <div class="ico">💬</div>
+            <div><strong>WhatsApp</strong><span>Chat with us instantly</span></div>
+          </a>
+          <a href="mailto:contactInfo@nice-mason.com?subject=Booking%20Enquiry%20%E2%80%93%20Nice%20Mason%20Hotel"
+             class="contact-card-btn email">
+            <div class="ico">✉️</div>
+            <div><strong>Email Us</strong><span>Fast response</span></div>
+          </a>
+        </div>
+
+        <div class="contact-info-grid">
+          <div class="info-card">
+            <div class="info-head"><span>📍</span><strong>Location</strong></div>
+            <p>Benin City, Edo State<br />Nigeria</p>
+          </div>
+          <div class="info-card">
+            <div class="info-head"><span>📞</span><strong>Contact Phone</strong></div>
+            <p><a href="tel:07051644020">07051644020</a></p>
+          </div>
+          <div class="info-card">
+            <div class="info-head"><span>💬</span><strong>WhatsApp</strong></div>
+            <p><a href="https://wa.me/2347073874943" target="_blank" rel="noopener">+234 707 387 4943</a></p>
+          </div>
+          <div class="info-card">
+            <div class="info-head"><span>✉️</span><strong>Email</strong></div>
+            <p><a href="mailto:contactInfo@nice-mason.com">contactInfo@nice-mason.com</a></p>
+          </div>
+          <div class="info-card">
+            <div class="info-head"><span>🕐</span><strong>Check-in</strong></div>
+            <p>2:00 PM</p>
+          </div>
+          <div class="info-card">
+            <div class="info-head"><span>🕛</span><strong>Check-out</strong></div>
+            <p>12:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-map reveal">
+        <div class="map-header">
+          <h3>Find Us in Benin City</h3>
+          <p>Benin City, Edo State, Nigeria</p>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63441.83434098!2d5.5892!3d6.3350!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1040d2a0b3c6f3c9%3A0x5d53e3c62bd4f7b2!2sBenin%20City%2C%20Edo%20State%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1700000000000"
+          width="100%" height="450" style="border:0"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Nice Mason Hotel location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="brand-name footer-brand">Nice Mason</p>
+      <p class="brand-tag">Luxury Hotel</p>
+      <p class="footer-blurb">The finest luxury hotel experience in Benin City, Nigeria. Where comfort meets culture.</p>
+    </div>
+
+    <div>
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Contact</h5>
+      <ul>
+        <li>📍 Benin City, Edo State, Nigeria</li>
+        <li>📞 <a href="tel:07051644020">07051644020</a></li>
+        <li>💬 <a href="https://wa.me/2347073874943" target="_blank" rel="noopener">+234 707 387 4943</a> <em>(WhatsApp)</em></li>
+        <li>✉️ <a href="mailto:contactInfo@nice-mason.com">contactInfo@nice-mason.com</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Stay With Us</h5>
+      <p class="footer-blurb">Reserve your luxury experience today.</p>
+      <a href="#contact" class="btn btn-gold-sm">Book Your Stay</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© <span id="year"></span> Nice Mason Hotel. All rights reserved.</p>
+      <p>Luxury Hospitality · Benin City, Nigeria</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/2347073874943?text=Hello%20Nice%20Mason%2C%20I%27d%20like%20to%20make%20a%20booking%20enquiry."
+   target="_blank" rel="noopener" class="float-wa" aria-label="Chat on WhatsApp">
+  <span class="wa-ring"></span>
+  <span class="wa-icon">💬</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
