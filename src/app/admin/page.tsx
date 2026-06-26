@@ -1,26 +1,19 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Lock, Save, Eye, EyeOff, ArrowLeft, CheckCircle } from "lucide-react";
 import type { Room } from "@/data/rooms";
 import { formatPrice } from "@/data/rooms";
+import roomsData from "../../../data/rooms.json";
 
 export default function AdminPage() {
   const [password, setPassword] = useState("");
   const [authenticated, setAuthenticated] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const [rooms, setRooms] = useState<Room[]>([]);
+  const [rooms, setRooms] = useState<Room[]>(roomsData as Room[]);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState("");
-
-  useEffect(() => {
-    if (authenticated) {
-      fetch("/api/rooms")
-        .then((r) => r.json())
-        .then(setRooms);
-    }
-  }, [authenticated]);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,23 +34,14 @@ export default function AdminPage() {
 
   const handleSave = async () => {
     setSaving(true);
-    try {
-      const res = await fetch("/api/rooms", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password, rooms }),
-      });
-      if (res.ok) {
-        setSaved(true);
-        setTimeout(() => setSaved(false), 3000);
-      } else {
-        alert("Save failed. Please try again.");
-      }
-    } catch {
-      alert("Network error. Please try again.");
-    } finally {
+    // On static hosting, direct file saves aren't supported.
+    // To update prices, edit data/rooms.json and redeploy.
+    setTimeout(() => {
       setSaving(false);
-    }
+      alert(
+        "To update prices on your live site:\n\n1. Edit data/rooms.json in your project\n2. Run npm run build\n3. Re-upload the 'out' folder to cPanel"
+      );
+    }, 500);
   };
 
   if (!authenticated) {

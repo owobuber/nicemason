@@ -1,25 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import RoomCard from "./RoomCard";
+import roomsData from "../../data/rooms.json";
 import type { Room } from "@/data/rooms";
 
+const rooms = roomsData as Room[];
+
 export default function Rooms() {
-  const [rooms, setRooms] = useState<Room[]>([]);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
-
-  useEffect(() => {
-    fetch("/api/rooms")
-      .then((r) => r.json())
-      .then(setRooms)
-      .catch(() => {
-        // Fallback: try to import static data
-        import("@/data/rooms").then(() => {});
-      });
-  }, []);
 
   return (
     <section id="rooms" className="py-24 md:py-36 bg-white" ref={ref}>
@@ -60,19 +51,11 @@ export default function Rooms() {
         </div>
 
         {/* Grid */}
-        {rooms.length > 0 ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {rooms.map((room, i) => (
-              <RoomCard key={room.id} room={room} index={i} />
-            ))}
-          </div>
-        ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <div key={i} className="h-96 bg-gray-100 rounded-sm animate-pulse" />
-            ))}
-          </div>
-        )}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {rooms.map((room, i) => (
+            <RoomCard key={room.id} room={room} index={i} />
+          ))}
+        </div>
       </div>
     </section>
   );
